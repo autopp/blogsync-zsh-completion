@@ -8,5 +8,9 @@ _blogsync() {
 }
 
 __blogsync_commands() {
-  _values 'command' 'pull' 'push' 'post' 'help'
+  _values 'command' \
+    'pull[Pull entries from remote]' \
+    'push[Push local entries to remote]' \
+    'post[Post a new entry to remote]' \
+    'help[Shows a list of commands or help for one command]'
 }
