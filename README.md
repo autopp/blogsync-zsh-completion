@@ -1,0 +1,1 @@
+# blogsync-zsh-completion
