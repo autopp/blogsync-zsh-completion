@@ -1,0 +1,5 @@
+#compdef blogsync
+
+_blogsync() {
+  _values 'command' 'pull' 'push' 'post' 'help'
+}
