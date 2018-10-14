@@ -1,5 +1,12 @@
 #compdef blogsync
 
 _blogsync() {
+  _arguments -C \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '(-v --version)'{-v,--version}'[print the version]' \
+    '1: :__blogsync_commands' \
+}
+
+__blogsync_commands() {
   _values 'command' 'pull' 'push' 'post' 'help'
 }
