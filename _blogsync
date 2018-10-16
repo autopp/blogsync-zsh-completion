@@ -42,6 +42,7 @@ _blogsync() {
             '(-)*:: :->null_state'
           ;;
         (help)
+          __blogsync_commands
           ;;
       esac
       ;;
