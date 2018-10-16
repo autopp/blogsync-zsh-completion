@@ -33,6 +33,7 @@ _blogsync() {
         (pull)
           ;;
         (push)
+          _files
           ;;
         (post)
           _arguments -C \
