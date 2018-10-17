@@ -42,6 +42,10 @@ _blogsync() {
             '(--custom-path)--custom-path' \
             '(-)*:: :->null_state'
           ;;
+        (list)
+          _arguments -C \
+            '(-p --full-path)'{-p,--full-path}'[Print full paths]'
+          ;;
         (help)
           __blogsync_commands
           ;;
@@ -55,6 +59,7 @@ __blogsync_commands() {
     'pull[Pull entries from remote]' \
     'push[Push local entries to remote]' \
     'post[Post a new entry to remote]' \
+    'list[List local blogs]' \
     'help[Shows a list of commands or help for one command]'
 }
 
