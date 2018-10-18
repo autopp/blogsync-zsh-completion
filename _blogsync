@@ -31,7 +31,7 @@ _blogsync() {
     (args)
       case $words[1] in
         (pull)
-          _values 'blogs' $(blogsync list)
+          __blogsync_blogs
           ;;
         (push)
           _files
@@ -41,6 +41,7 @@ _blogsync() {
             '(--title)--title' \
             '(--draft)--draft' \
             '(--custom-path)--custom-path' \
+            '1: :__blogsync_blogs'\
             '(-)*:: :->null_state'
           ;;
         (list)
@@ -62,6 +63,10 @@ __blogsync_commands() {
     'post[Post a new entry to remote]' \
     'list[List local blogs]' \
     'help[Shows a list of commands or help for one command]'
+}
+
+__blogsync_blogs() {
+  _values 'blogs' $(blogsync list)
 }
 
 _blogsync "$@"
