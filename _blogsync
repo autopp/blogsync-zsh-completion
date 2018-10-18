@@ -31,6 +31,7 @@ _blogsync() {
     (args)
       case $words[1] in
         (pull)
+          _values 'blogs' $(blogsync list)
           ;;
         (push)
           _files
