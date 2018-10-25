@@ -45,8 +45,6 @@ _blogsync() {
             '(-)*:: :->null_state'
           ;;
         (list)
-          _arguments -C \
-            '(-p --full-path)'{-p,--full-path}'[Print full paths]'
           ;;
         (help)
           __blogsync_commands
@@ -66,7 +64,7 @@ __blogsync_commands() {
 }
 
 __blogsync_blogs() {
-  _values 'blogs' $(blogsync list)
+  _values 'blogs' $(blogsync list | awk '{ print $1 }')
 }
 
 _blogsync "$@"
